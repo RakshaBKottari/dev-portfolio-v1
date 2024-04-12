@@ -30,32 +30,8 @@ const work = [
 		linkGithub: 'https://github.com',
 	},
 	{
-		name: 'Pokedex',
-		description: 'Etiam eget volutpat risus. Nam magna bibendum a metus dignissim, id eleifend libero luctus molestie eget.',
-		stack: [
-			{ icon: icon.SiHtml5, name: 'HTML' },
-			{ icon: icon.SiCss3, name: 'CSS' },
-			{ icon: icon.SiJavascript, name: 'Javascript' },
-			{ icon: icon.SiReact, name: 'ReactJS' },
-		],
-		linkProject: 'https://example.com',
-		linkGithub: 'https://github.com',
-	},
-	{
 		name: 'E-Commerce',
 		description: 'Nullam id mauris auctor, sollicitudin sapien id, sagittis turpis proin et nunc sempe, venenatis erat.',
-		stack: [
-			{ icon: icon.SiHtml5, name: 'HTML' },
-			{ icon: icon.SiCss3, name: 'CSS' },
-			{ icon: icon.SiJavascript, name: 'Javascript' },
-			{ icon: icon.SiReact, name: 'ReactJS' },
-		],
-		linkProject: 'https://example.com',
-		linkGithub: 'https://github.com',
-	},
-	{
-		name: 'Twitter clon',
-		description: 'Cras leo mauris, gravida vel lectus ac, congue luctus odio. Sed varius varius est eget convallis sagittis sit amet.',
 		stack: [
 			{ icon: icon.SiHtml5, name: 'HTML' },
 			{ icon: icon.SiCss3, name: 'CSS' },
@@ -83,7 +59,7 @@ const stack = [
 ]
 
 const contact = {
-	description: 'Feel free to comntact me!',
+	description: 'Feel free to contact me!',
 	email: 'example@email.com'
 }
 
