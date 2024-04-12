@@ -1,28 +1,35 @@
-# Stage 1: Build the application
-FROM node:16 AS builder
+# Use an existing docker image as a base and name it as 'builder'
+FROM node:17-alpine AS builder
 
+# Set the working directory inside the container to /app
 WORKDIR /app
 
-# Copy package.json and yarn.lock (or package-lock.json if you're using npm)
-COPY package.json yarn.lock ./
+# Copy the package.json file from the local machine to the container's /app directory
+COPY ./package.json /app/package.json
 
-# Install dependencies
-RUN yarn install
+# Install Node.js dependencies (npm install)
+RUN npm install
 
-# Copy the rest of the application code
-COPY . .
+# Copy the rest of the application source code from the local machine to the container's /app directory
+COPY . /app
 
-# Build the application
-RUN yarn build
+# Build the application (npm run build)
+RUN npm run build
 
-# Stage 2: Serve the built application
+# Start a new stage from nginx:alpine
 FROM nginx:alpine
 
-# Copy the built application from the previous stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Set working directory to nginx asset directory
+WORKDIR /usr/share/nginx/html
 
-# Expose port 80
-EXPOSE 80
+# Remove default nginx static assets
+# RUN rm -rf *
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Copy static assets from builder stage
+COPY --from=builder /app/build .
+
+# Copy nginx configuration
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+# Entry point when Docker container has started
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
