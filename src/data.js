@@ -1,7 +1,7 @@
 import * as icon  from 'react-icons/si'
 
 const profile = {
-	name: 'Carlos Montenegro',
+	name: 'Raksha B Kottari',
 	role: 'Front End Developer',
 	description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed facere, itaque excepturi, necessitatibus cum ex nisi.',
 };
@@ -13,7 +13,7 @@ const social = [
 	{ icon: icon.SiInstagram, link: 'https://www.instagram.com/' },
 ];
 
-const brand = 'Singleton'
+const brand = 'Raksha B Kottari'
 
 
 const work = [
@@ -79,20 +79,11 @@ const stack = [
 			{ icon: icon.SiTypescript, name: 'Typescript' },
 			{ icon: icon.SiReact, name: 'React', },
 		],
-	},
-	{
-		name: 'Back End',
-		items: [
-			{ icon: icon.SiNodedotjs, name: 'NodeJS' },
-			{ icon: icon.SiDeno, name: 'Deno' },
-			{ icon: icon.SiMongodb, name: 'MongoDB', },
-			{ icon: icon.SiFirebase, name: 'Firebase', },
-		],
-	},
+	}
 ]
 
 const contact = {
-	description: 'Tenetur laudantium? Aliquid ipsum perferendis blanditiis non. Adipisci eos numquam reiciendis, rerum, quo similique reprehenderit. Adipisci eos numquam reiciendis',
+	description: 'Feel free to comntact me!',
 	email: 'example@email.com'
 }
 
